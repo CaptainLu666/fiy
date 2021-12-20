@@ -22,6 +22,7 @@ COPY --from=builder /go/release/fiy /
 COPY --from=builder /go/release/config/ /config/
 
 COPY --from=builder /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+RUN mkdir -p /static/uploadfile
 
 EXPOSE 8000
 
